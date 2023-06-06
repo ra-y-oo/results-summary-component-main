@@ -11,8 +11,10 @@
   /* Gradients */
   --clr-lightSlateBlue: hsl(252, 100%, 67%); /* (background) */
   --clr-lightRoyalBlue: hsl(241, 81%, 54%); /* (background) */
-  --clr-violetBlue: hsla(256, 72%, 46%, 1); /* (circle) */
-  --clr-persianBlue: hsla(241, 72%, 46%, 0); /* (circle) */
+  --clr-violetBlue: hsl(256, 72%, 46%); /* (circle) */
+  --clr-persianBlue: #2421ca; /* (circle) */
+  --bg-grad: linear-gradient(10deg,hsl(241, 81%, 54%),hsl(252, 100%, 67%));
+  --circle-grad: linear-gradient(10deg,hsl(256, 72%, 46%),hsl(241, 72%, 46%));
   /* Neutral */
   --clr-white: hsl(0, 0%, 100%);
   --clr-paleBlue: hsl(221, 100%, 96%);
@@ -55,10 +57,11 @@ h3 {
 .flex {
   display: flex;
   flex-direction: column;
+  margin-inline: auto;
 }
 
 .bg-blue {
-  background: var(--clr-cobaltBlue);
+  background: var(--bg-grad);
   color: var(--clr-white);
   text-align: center;
 }
@@ -122,7 +125,8 @@ h3 {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background-color: black;
+  background-color: rgb(78, 33, 202);
+  background: linear-gradient(10deg, rgba(36, 33, 202, 0) 10%), rgb(78, 33, 202) 100%;
   padding: 10px;
   margin: 30px auto;
 }
@@ -132,7 +136,7 @@ h3 {
   margin-top: 50px;
 }
 .bg-blue p {
-  margin: 10px auto;
+  margin: 30px auto;
   width: 70%;
 }
 
@@ -165,6 +169,11 @@ button {
   background-color: var(--clr-darkGrayBlue);
   border: none;
   border-radius: 70px;
+}
+
+button:hover {
+  background: var(--bg-grad);
+  cursor: pointer;
 }
 
 /* DESK STYLES */
