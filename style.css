@@ -178,17 +178,13 @@ button:hover {
 
 /* DESK STYLES */
 @media (min-width: 750px) {
-  .conainer {
-    margin-left: 50px;
-    background-color: var(--clr-white);
-  }
   .flex {
     flex-direction: row;
     margin-top: 100px;
     margin-left: 100px;
   }
   .flex .bg-blue {
-    height: 550px;
+    height: 575px;
     width: 375px;
     border-radius: 20px;
   }
